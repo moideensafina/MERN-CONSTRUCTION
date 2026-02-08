@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Hammer, PenTool, HardHat, Zap, Truck, Ruler, Home as HomeIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import { loadPackage } from "../actions/projectAction";
 import "./Home.css"; // Reusing card styles
 
@@ -58,20 +59,34 @@ export default function Service() {
 
             {/* Services Grid */}
             <section className="section-padding container">
-                <div className="section-header">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="section-header"
+                >
                     <span className="section-subtitle">What We Do</span>
                     <h2>Expert Construction Services</h2>
-                </div>
+                </motion.div>
 
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <div className="service-card" key={index}>
+                        <motion.div
+                            className="service-card"
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -10 }}
+                        >
                             <div className="service-icon-wrapper" style={{ width: "80px", height: "80px" }}>
                                 {service.icon}
                             </div>
                             <h3>{service.title}</h3>
                             <p>{service.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>

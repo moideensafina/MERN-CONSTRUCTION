@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
 import "./Contact.css";
 
 export default function Contact() {
@@ -8,15 +9,35 @@ export default function Contact() {
       {/* Hero Section */}
       <div className="contact-hero">
         <div className="container">
-          <h1 style={{ color: "white" }}>Contact Us</h1>
-          <p style={{ color: "rgba(255,255,255,0.8)" }}>We'd Love to Hear From You</p>
+          <motion.h1
+            style={{ color: "white" }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Contact Us
+          </motion.h1>
+          <motion.p
+            style={{ color: "rgba(255,255,255,0.8)" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            We'd Love to Hear From You
+          </motion.p>
         </div>
       </div>
 
       <div className="container" style={{ marginBottom: "5rem" }}>
         <div className="contact-wrapper">
           {/* Left Panel: Info */}
-          <div className="contact-info-panel">
+          <motion.div
+            className="contact-info-panel"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div>
               <h3 style={{ marginBottom: "2rem" }}>Get In Touch</h3>
               <div className="contact-detail-item">
@@ -48,10 +69,16 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Panel: Form */}
-          <div className="contact-form-panel">
+          <motion.div
+            className="contact-form-panel"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <h3 style={{ marginBottom: "1.5rem", color: "var(--color-primary)" }}>Send a Message</h3>
             <form>
               <div className="form-group">
@@ -70,9 +97,17 @@ export default function Contact() {
                 <label className="form-label">Message</label>
                 <textarea className="form-textarea" rows="4" placeholder="How can we help you?"></textarea>
               </div>
-              <button type="submit" className="submit-btn" onClick={(e) => e.preventDefault()}>Send Message</button>
+              <motion.button
+                type="submit"
+                className="submit-btn"
+                onClick={(e) => e.preventDefault()}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Send Message
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
 

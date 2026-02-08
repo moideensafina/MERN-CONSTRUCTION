@@ -148,6 +148,9 @@ h6 {
   margin-bottom: var(--space-4);
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  /* Prevent long words from breaking layout */
+  hyphens: auto;
 }
 
 /* Fluid Typography */
