@@ -1,92 +1,92 @@
-.login-container{
-    max-width: 440px;
-    padding: 0 20px;
-    margin: 100px auto;
-  }
-  .wrapper{
-    width: 100%;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
-  }
-  .wrapper .title{
-    height: 90px;
-    background: var(--cl--3--);
-    border-radius: 5px 5px 0 0;
-    color: #fff;
-    font-size: 27px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .wrapper form{
-    padding: 30px 25px 25px 25px;
-  }
-  .wrapper form .row{
-    height: 45px;
-    margin-bottom: 15px;
-    position: relative;
-  }
-  .wrapper form .row input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    padding-left: 60px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  form .row input:focus{
-    border-color: var(--cl--3--);
-    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
-  }
-  form .row input::placeholder{
-    color: #999;
-  }
-  .wrapper form .row i{
-    position: absolute;
-    width: 47px;
-    height: 100%;
-    color: #fff;
-    font-size: 18px;
-    background: var(--cl--3--);
-    border: 1px solid var(--cl--3--);
-    border-radius: 5px 0 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .wrapper form .row  .updatePackage{
-    width: 77px;
-    font-size: 15px;
-  }
-  .wrapper form .row .updatePackageInput{
-    padding-left: 90px;
-  }
-  .wrapper form .button input{
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 0px;
-    background: var(--cl--3--);
-    border: 1px solid var(--cl--3--);
-    cursor: pointer;
-  }
-  form .button input:hover{
-    background: var(--cl--3--);
-  }
-  .wrapper form .signup-link{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 17px;
-  }
-  .wrapper form .signup-link a{
-    color: var(--cl--3--);
-    text-decoration: none;
-  }
-  form .signup-link a:hover{
-    text-decoration: underline;
-  }
-  
+/* Login.css */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: var(--color-background);
+  padding: var(--space-4);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-surface);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.login-title {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.login-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-10);
+  /* Left padding for icon */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.login-btn {
+  width: 100%;
+  padding: var(--space-3);
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.login-footer {
+  margin-top: var(--space-6);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}

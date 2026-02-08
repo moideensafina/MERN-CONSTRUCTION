@@ -1,0 +1,103 @@
+/* Contact.css */
+.contact-hero {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: var(--space-16) 0 var(--space-24) 0;
+    text-align: center;
+}
+
+.contact-wrapper {
+    margin-top: -4rem;
+    /* Overlap hero */
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr 1.5fr;
+        margin-top: -4rem;
+        /* Only overlap on larger screens */
+    }
+}
+
+.contact-info-panel {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: var(--space-4);
+    /* Reduced padding for mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .contact-info-panel {
+        padding: var(--space-8);
+    }
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.contact-detail-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    color: var(--color-primary);
+}
+
+.contact-form-panel {
+    padding: var(--space-8);
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--color-text-primary);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    transition: all 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: var(--space-3);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-primary-light);
+}

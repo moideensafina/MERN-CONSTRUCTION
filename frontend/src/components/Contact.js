@@ -1,62 +1,85 @@
-
+import { Fragment } from "react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import "./Contact.css";
 
 export default function Contact() {
-    return(
-        <>
-        
-        <section className="contact">
-          <div>
-            <div className="contact-btns">
-              <button className="contact-btn">Contact Us</button>
-            </div>
-            <div className="contact-info">
-              <div className="contact-info-item">
-                <div className="contact-info-icon">
-                  <i className="fas fa-home"></i>
-                </div>
-                
-                <div className="contact-info-content">
-                  <h4>Address</h4>
-                  <p>Nagai Main Road,<br/> Vinayaga Complex,<br/> Andipalayam, <br/> Adiyakkamangalam,<br/>Thiruvarur - 611101</p>
-                </div>
-              </div>
-              
-              <div className="contact-info-item">
-                <div className="contact-info-icon">
-                  <i className="fas fa-phone"></i>
-                </div>
-                
-                <div className="contact-info-content">
-                  <h4>Phone</h4>
-                  <a href="tel:+919944012736">+919944012736</a>
+  return (
+    <Fragment>
+      {/* Hero Section */}
+      <div className="contact-hero">
+        <div className="container">
+          <h1 style={{ color: "white" }}>Contact Us</h1>
+          <p style={{ color: "rgba(255,255,255,0.8)" }}>We'd Love to Hear From You</p>
+        </div>
+      </div>
+
+      <div className="container" style={{ marginBottom: "5rem" }}>
+        <div className="contact-wrapper">
+          {/* Left Panel: Info */}
+          <div className="contact-info-panel">
+            <div>
+              <h3 style={{ marginBottom: "2rem" }}>Get In Touch</h3>
+              <div className="contact-detail-item">
+                <div className="contact-detail-icon"><MapPin size={24} /></div>
+                <div>
+                  <h4 style={{ fontSize: "1.1rem", marginBottom: "0.25rem" }}>Visit Us</h4>
+                  <p style={{ margin: 0, opacity: 0.9 }}>123 Construction Avenue,<br />Chennai, Tamil Nadu 600001</p>
                 </div>
               </div>
-              
-              <div className="contact-info-item">
-                <div className="contact-info-icon">
-                  <i className="fas fa-envelope"></i>
+              <div className="contact-detail-item">
+                <div className="contact-detail-icon"><Phone size={24} /></div>
+                <div>
+                  <h4 style={{ fontSize: "1.1rem", marginBottom: "0.25rem" }}>Call Us</h4>
+                  <p style={{ margin: 0, opacity: 0.9 }}>+91 99440 12736</p>
                 </div>
-                
-                <div className="contact-info-content">
-                  <h4>Email</h4>
-                 <p>harri.cse@gmail.com</p>
+              </div>
+              <div className="contact-detail-item">
+                <div className="contact-detail-icon"><Mail size={24} /></div>
+                <div>
+                  <h4 style={{ fontSize: "1.1rem", marginBottom: "0.25rem" }}>Email Us</h4>
+                  <p style={{ margin: 0, opacity: 0.9 }}>info@turboconstruction.com</p>
+                </div>
+              </div>
+              <div className="contact-detail-item">
+                <div className="contact-detail-icon"><Clock size={24} /></div>
+                <div>
+                  <h4 style={{ fontSize: "1.1rem", marginBottom: "0.25rem" }}>Working Hours</h4>
+                  <p style={{ margin: 0, opacity: 0.9 }}>Mon - Sat: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
           </div>
 
-
-
-
-
-
-            <div>
-              <div className="contact-btns">
-                <button className="contact-btn">OFFICE LOCATION</button>
+          {/* Right Panel: Form */}
+          <div className="contact-form-panel">
+            <h3 style={{ marginBottom: "1.5rem", color: "var(--color-primary)" }}>Send a Message</h3>
+            <form>
+              <div className="form-group">
+                <label className="form-label">Full Name</label>
+                <input type="text" className="form-input" placeholder="Your Name" />
               </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d275.34566299530456!2d79.68537225108399!3d10.7638398819845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5541f63adf91c7%3A0x61cde09593cdd42c!2sDREAM%20HOUSE%20CONSTRUCTION!5e0!3m2!1sen!2sin!4v1701864065603!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-        </>
-    )
-};
+              <div className="form-group">
+                <label className="form-label">Email Address</label>
+                <input type="email" className="form-input" placeholder="your@email.com" />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Phone Number</label>
+                <input type="tel" className="form-input" placeholder="+91 98765 43210" />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Message</label>
+                <textarea className="form-textarea" rows="4" placeholder="How can we help you?"></textarea>
+              </div>
+              <button type="submit" className="submit-btn" onClick={(e) => e.preventDefault()}>Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Map Placeholder */}
+      <div className="map-placeholder" style={{ height: "400px", background: "#eee", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <p style={{ color: "#888" }}>Google Map Embed Would Go Here</p>
+      </div>
+    </Fragment>
+  );
+}

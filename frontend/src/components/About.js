@@ -1,131 +1,96 @@
+import { Fragment } from "react";
+import { Link } from "react-router-dom";
+import { CheckCircle, Users, Award, ShieldCheck } from "lucide-react";
+
 export default function About() {
-    return(
-        <>
-        <section className="services-home">
-            <h2>About us</h2>
-            <div className="services">
-            <div className="services-img">
-                <img src="./images/about-us.jpg" alt=""/>
+    return (
+        <Fragment>
+            {/* Hero */}
+            <div className="hero-section" style={{ height: "50vh", backgroundImage: "url('/images/about-us.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+                <div className="hero-overlay"></div>
+                <div className="hero-content">
+                    <h1 className="hero-title">About Turbo Construction</h1>
+                    <p className="text-white">Building Excellence Since 2010</p>
+                </div>
             </div>
-            <div className="services-content">
-                <p>
-                    Turbo Construction House is the Best House Construction Company in Tamil Nadu with over 15 years of experience. We specialize in custom home building and offer a wide range of services, including design, construction, and project management. Our team of skilled professionals comprises architects, engineers, project managers, and skilled craftsmen who are passionate about bringing your dream home to life.
-                </p>
-                <p>
-                    Turbo Construction House is among the top professional home construction companies in Tamil Nadu. We are the nice residential house builders in Tamil Nadu with trips and information you can trust. With 45+ homes efficiently constructed and 125+ overall ongoing house construction, interior & commercial development projects.
-                </p>
-                <p>
-                    Whether you’re looking to build your dream home from scratch or seeking to renovate and remodel your existing space, our team is ready to turn your vision into reality. We take pride in our ability to deliver projects on time and within budget, without compromising on quality or craftsmanship
-                </p>
-                
-            </div>
-        </div>
-        <h2>Our Vision </h2>
-        <div className="services">
-            <div className="services-img">
-                <img src="./images/our-vision.jpg" alt=""/>
-            </div>
-            <div className="services-content">
-                <p>
-                    Turbo Construction House is the leading house builder, redefine the art of home construction, setting new standards of excellence and innovation in the industry and the go-to choice for custom home building, known for our exceptional craftsmanship and client satisfaction.
-                </p>
-                <ul>
-                    <li>
-                        Excellence in Quality
-                    </li>
-                    <li>
-                        Customer Satisfaction
-                    </li>
-                    <li>
-                        Sustainable Construction
-                    </li>
 
-                    <li>
-                        Safety First
-                    </li>
-                    <li>
-                        Collaboration and Teamwork
-                    </li>
-                    <li>
-                        Innovation and Technology
-                    </li>
-                    <li>
-                        Social Responsibility
-                    </li>
-                    <li>
-                        Professional Growth and Development
-                    </li>
-                    <li>
-                        Integrity and Ethics
-                    </li>
-                    <li>
-                        Industry Leadership
-                    </li>
-                    <li>
-                        Cost Effective Solutions
-                        </li>
-                    <li>
-                        Legacy of Success
-                    </li>
-                    <li>
-                        Innovation in Design
-                        </li>
-                </ul>
-            </div>
-        </div>
-        <h2>Why Choose Us</h2>
-        <div className="services">
-            <div className="services-img">
-                <img src="./images/why-choose-us.jpg" alt=""/>
-            </div>
-            <div className="services-content">
-                <p>
-                    Are you looking for the best house construction company, we offer top-notch services for all your home building needs. Whether you’re searching for home builders near you, new construction options, or custom houses, we’ve got you covered.
+            {/* Introduction */}
+            <section className="section-padding container">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span className="section-subtitle">Our Story</span>
+                        <h2>A Legacy of Quality</h2>
+                        <p className="text-lg text-secondary mb-6">
+                            Turbo Construction is a leading construction firm in Tamil Nadu, dedicated to transforming visions into reality. With over 15 years of experience, we have successfully delivered countless residential and commercial projects.
+                        </p>
+                        <p className="mb-6">
+                            Our team comprises seasoned architects, engineers, and project managers who work collaboratively to ensure every project meets the highest standards of quality, safety, and durability. We believe in transparency, integrity, and client satisfaction above all else.
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="flex items-center gap-2">
+                                <CheckCircle className="text-secondary" size={20} />
+                                <span>ISO 9001 Certified</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <CheckCircle className="text-secondary" size={20} />
+                                <span>On-Time Delivery</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <CheckCircle className="text-secondary" size={20} />
+                                <span>Cost-Effective</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <CheckCircle className="text-secondary" size={20} />
+                                <span>Expert Team</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative">
+                        <img src="/images/customer-love-1.jpg" alt="Team at work" className="rounded-xl shadow-xl w-full h-auto" />
+                        <div className="absolute -bottom-6 -left-6 bg-primary p-6 rounded-lg shadow-lg hidden md:block">
+                            <h3 className="text-secondary text-4xl font-bold mb-1">15+</h3>
+                            <p className="text-white text-sm uppercase tracking-wider">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                </p>
-                <ul>
-                    <li>
-                        13+ Years of Experience
-                        
-                    </li>
-                    <li>
-                            Expert Builders
-                        </li>
-                        <li>
-                            Wide Range of Services
-                        </li>
-                        <li>
-                            Turnkey House Construction
-                        </li>
-                        <li>
-                            Competitive Pricing
-                        </li>
-                        <li>
-                            On-Time Delivery
-                        </li>
-                    <li>
-                        No Hidden Charges
-                    </li>
-                        <li>
-                            High Quality Work
-                        </li>
-                        <li>
-                            End to End Ownership
-                        </li>
-                        <li>
-                            In-House Construction
-                        </li>
-                        <li>
-                            Exceptional Customer Reviews
-                        </li>
-                        <li>
-                            Expertise in Tamil Nadu                      
-                        </li>
-                </ul>
-            </div>
-        </div>
+            {/* Core Values */}
+            <section className="section-padding bg-surface-dim">
+                <div className="container">
+                    <div className="section-header">
+                        <span className="section-subtitle">What Drives Us</span>
+                        <h2>Our Core Values</h2>
+                    </div>
 
-        </section>
-        </>
-    )
-};
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-secondary">
+                            <ShieldCheck className="text-secondary mb-4" size={40} />
+                            <h3>Integrity</h3>
+                            <p>We conduct our business with the highest level of honesty and improved ethics.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary">
+                            <Users className="text-primary mb-4" size={40} />
+                            <h3>Collaboration</h3>
+                            <p>We believe in teamwork and open communication with our clients and partners.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-secondary">
+                            <Award className="text-secondary mb-4" size={40} />
+                            <h3>Excellence</h3>
+                            <p>We strive for perfection in every detail, delivering superior quality consistently.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="cta-section">
+                <div className="container cta-content">
+                    <h2 className="cta-title">Ready to Start Your Project?</h2>
+                    <p className="cta-text">Contact us today to discuss your requirements and get a free quote.</p>
+                    <Link to="/contact" className="cta-btn inline-block">Contact Us Now</Link>
+                </div>
+            </section>
+        </Fragment>
+    );
+}
